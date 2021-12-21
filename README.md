@@ -137,3 +137,6 @@ Set collages data. This should be JSON string and each element needs contains "`
 | Event Signature | Description |
 | ----------- | ----------- |
 | msc-collages-click | Fired when <msc-collages /> clicked. Developers could get original click event from `event.detail.baseEvent` to do preventDefault behavior. |
+
+## Reference
+- [&lt;msc-collages /&gt;](https://blog.lalacube.com/mei/webComponent_msc-collages.html)
