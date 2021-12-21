@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Component: &lt;msc-collages /&gt; - web components based images effect</title>
+<meta name="description" content="People love collages. With collages we could combined several images together and make them more vivid and interesting. Developers could apply <msc-collages /> instend of annoying HTML code & CSS setting. All we need to do is just make a few setting and everything will be all set. That's take a look what can <msc-collages /> do ? Here comes some <msc-collages /> with different theme." />
+<script type="module" src="mjs/wc-msc-collages.js"></script>
+<style>
+/*** The new CSS Reset - version 1.4.2 (last updated 30.11.2021) ***/
+/* All rights reserved from https://elad2412.github.io/the-new-css-reset/ */
+*:where(:not(iframe,canvas,img,svg,video):not(svg *,symbol *)){all:unset;display:revert;}
+*,*::before,*::after{box-sizing:border-box;}
+ol,ul,menu{list-style:none;}
+img{max-width:100%;}
+table{border-collapse:collapse;}
+textarea{white-space:revert;}
+:where([contenteditable]){-moz-user-modify:read-write;-webkit-user-modify:read-write;overflow-wrap:break-word;-webkit-line-break:after-white-space;}
+
+/* page */
+html,body{font-family:system-ui,sans-serif;text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px;}
+#hd,#ft{display:none;}
+
+/* carousel */
+.carousel-shell{width:100%;-webkit-overflow-scrolling:touch;overflow:hidden;overflow-x:scroll;scroll-behavior:smooth;}
+.carousel-shell__queue{display:flex;justify-content:flex-start;}
+.carousel-shell__queue>*{flex-grow:0;flex-shrink:0;}
+.carousel-shell__queue::before{flex:0 0 var(--spl);width:var(--spl);content:'';display:block;}
+.carousel-shell__queue::after{flex:0 0 var(--spl);width:var(--spl);content:'';display:block;}
+
+.carousel-shell__collages{--spl:var(--main-padding);}
+.carousel-shell__collages{inline-size:calc(100% + var(--main-padding) * 2);margin-inline-start:calc(var(--main-padding) * -1);}
+.carousel-shell__collages msc-collages{inline-size:300px;}
+.carousel-shell__collages msc-collages:nth-of-type(n+2){margin-inline-start:.75em;}
+
+/* msc-collages */
+msc-collages:not(:defined){visibility:hidden;}
+</style>
+</head>
+
+<body>
+<div class="carousel-shell carousel-shell__collages">
+  <div class="carousel-shell__queue">
+    <msc-collages>
+      <script type="application/json">
+        {
+          "theme": 1,
+          "object-fit": "cover",
+          "collages": [
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=1",
+              "alt": "grayscale 1",
+              "target": "_blank"
+            }
+          ]
+        }
+      </script>
+    </msc-collages>
+
+    <msc-collages>
+      <script type="application/json">
+        {
+          "theme": 2,
+          "object-fit": "cover",
+          "collages": [
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=2",
+              "alt": "grayscale 1",
+              "target": "_blank"
+            },
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=3",
+              "alt": "grayscale 2",
+              "target": "_blank"
+            }
+          ]
+        }
+      </script>
+    </msc-collages>
+
+    <msc-collages>
+      <script type="application/json">
+        {
+          "theme": 3,
+          "object-fit": "cover",
+          "collages": [
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=4",
+              "alt": "grayscale 1",
+              "target": "_blank"
+            },
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=5",
+              "alt": "grayscale 2",
+              "target": "_blank"
+            }
+          ]
+        }
+      </script>
+    </msc-collages>
+
+    <msc-collages>
+      <script type="application/json">
+        {
+          "theme": 4,
+          "object-fit": "cover",
+          "collages": [
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=6",
+              "alt": "grayscale 1",
+              "target": "_blank"
+            },
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=7",
+              "alt": "grayscale 2",
+              "target": "_blank"
+            },
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=8",
+              "alt": "grayscale 3",
+              "target": "_blank"
+            }
+          ]
+        }
+      </script>
+    </msc-collages>
+
+    <msc-collages>
+      <script type="application/json">
+        {
+          "theme": 5,
+          "object-fit": "cover",
+          "collages": [
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=9",
+              "alt": "grayscale 1",
+              "target": "_blank"
+            },
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=10",
+              "alt": "grayscale 2",
+              "target": "_blank"
+            },
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=11",
+              "alt": "grayscale 3",
+              "target": "_blank"
+            }
+          ]
+        }
+      </script>
+    </msc-collages>
+
+    <msc-collages>
+      <script type="application/json">
+        {
+          "theme": 6,
+          "object-fit": "cover",
+          "collages": [
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=12",
+              "alt": "grayscale 1",
+              "target": "_blank"
+            },
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=13",
+              "alt": "grayscale 2",
+              "target": "_blank"
+            },
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=14",
+              "alt": "grayscale 3",
+              "target": "_blank"
+            }
+          ]
+        }
+      </script>
+    </msc-collages>
+
+    <msc-collages>
+      <script type="application/json">
+        {
+          "theme": 7,
+          "object-fit": "cover",
+          "collages": [
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=15",
+              "alt": "grayscale 1",
+              "target": "_blank"
+            },
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=16",
+              "alt": "grayscale 2",
+              "target": "_blank"
+            },
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=17",
+              "alt": "grayscale 3",
+              "target": "_blank"
+            }
+          ]
+        }
+      </script>
+    </msc-collages>
+
+    <msc-collages>
+      <script type="application/json">
+        {
+          "theme": 8,
+          "object-fit": "cover",
+          "collages": [
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=18",
+              "alt": "grayscale 1",
+              "target": "_blank"
+            },
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=19",
+              "alt": "grayscale 2",
+              "target": "_blank"
+            },
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=20",
+              "alt": "grayscale 3",
+              "target": "_blank"
+            },
+            {
+              "link": "?",
+              "src": "https://picsum.photos/300/300?grayscale&random=21",
+              "alt": "grayscale 4",
+              "target": "_blank"
+            }
+          ]
+        }
+      </script>
+    </msc-collages>
+  </div>
+</div>
+
+<script>
+customElements.whenDefined('msc-collages').then(() => {
+  const handler = (evt) => {
+    const {
+      detail: {
+        alt,
+        baseEvent,
+        link,
+        src,
+        target
+      }
+    } = evt;
+
+    console.log(evt.detail);
+  };
+
+  Array.from(document.querySelectorAll('msc-collages')).forEach(
+    (collages) => {
+      collages.addEventListener('msc-collages-click', handler);
+    }
+  );
+});
+</script>
+</body>
+
+</html>
