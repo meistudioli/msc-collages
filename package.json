@@ -1,0 +1,23 @@
+{
+  "name": "msc-collages",
+  "version": "1.0.0",
+  "description": "People love collages. With collages we could combined several images together and make them more vivid and interesting. Developers could apply <msc-collages /> instend of annoying HTML code & CSS setting. All we need to do is just make a few setting and everything will be all set.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meistudioli/msc-collages.git"
+  },
+  "keywords": [
+    "web",
+    "component"
+  ],
+  "author": "Paul Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meistudioli/msc-collages/issues"
+  },
+  "homepage": "https://github.com/meistudioli/msc-collages#readme"
+}
