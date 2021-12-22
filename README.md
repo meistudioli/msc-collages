@@ -1,7 +1,7 @@
 # msc-collages
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/msc-collages)
 
-People love collages. With collages we could combined several images together and make them more vivid and interesting. Developers could apply &lt;msc-collages /> instend of annoying HTML code &amp; CSS setting. All we need to do is just make a few setting and everything will be all set. 
+People love collages. With collages we could combined several images together and make them more vivid and interesting. Developers could apply &lt;msc-collages /> instead of annoying HTML code &amp; CSS setting. All we need to do is just make a few setting and everything will be all set. 
 
 ## Basic Usage
 
