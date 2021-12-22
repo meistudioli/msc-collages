@@ -100,7 +100,9 @@ msc-collages {
 &lt;msc-collages /&gt; supports some attributes to let it become more convenience & useful.
 
 - theme
+
 Set theme id for different usage. Developers could set `1` ~ `8` theme. Default is "`1`".
+
 ```html
 <msc-collages
   theme="1"
@@ -109,7 +111,9 @@ Set theme id for different usage. Developers could set `1` ~ `8` theme. Default 
 ```
 
 - object-fit
+
 Set image render property. This attribute only accept `cover` or `contain`. Default is "`cover`".
+
 ```html
 <msc-collages
   object-fit="cover"
@@ -118,7 +122,9 @@ Set image render property. This attribute only accept `cover` or `contain`. Defa
 ```
 
 - collages
+
 Set collages data. This should be JSON string and each element needs contains "`link`"、"`src`"、"`alt`"、"`target`" for rendering. Max count is 4.
+
 ```html
 <msc-collages
   collages='[{"link":"?","src":"https://picsum.photos/300/300?grayscale&random=1","alt":"grayscale 1","target":"_blank"}]'
