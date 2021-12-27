@@ -3,6 +3,8 @@
 
 People love collages. With collages we could combined several images together and make them more vivid and interesting. Developers could apply &lt;msc-collages /> instead of annoying HTML code &amp; CSS setting. All we need to do is just make a few setting and everything will be all set. 
 
+![<msc-collages />](https://blog.lalacube.com/mei/img/preview/msc-collages.png)
+
 ## Basic Usage
 
 - Required Script
@@ -51,6 +53,15 @@ Put <msc-collages /> into HTML document. It will have different functions and lo
     }
   </script>
 </msc-collages>
+```
+
+Otherwise, developers could also choose `remoteconfig` to fetch config for &lt;msc-collages /&gt;.
+
+```html
+<msc-collages
+  remoteconfig="https://your-domain/api-path"
+  ...
+></msc-collages>
 ```
 
 ## JavaScript Instantiation
