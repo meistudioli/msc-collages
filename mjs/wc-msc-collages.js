@@ -153,27 +153,24 @@ export class MscCollages extends HTMLElement {
     this._onCollageClick = this._onCollageClick.bind(this);
   }
 
-  connectedCallback() {
+  async connectedCallback() {
     const signal = this.#data.controller.signal;
 
-    const script = this.querySelector('script');
-    if (script) {
-      try {
-        this.#config = {
-          ...this.#config,
-          ...JSON.parse(script.textContent.replace(/\n/g, '').trim())
-        };
-      } catch(err) {
-        console.warn(`${_wcl.classToTagName(this.constructor.name)}: ${err.message}`);
-        this.remove();
-      }
+    const { config, error } = await _wcl.getWCConfig(this);
+
+    if (error) {
+      console.warn(`${_wcl.classToTagName(this.constructor.name)}: ${error}`);
+      this.remove();
+      return;
+    } else {
+      this.#config = {
+        ...this.#config,
+        ...config
+      };
     }
 
-    Object.keys(defaults).forEach(
-      (key) => {
-        this._upgradeProperty(key);
-      }
-    , this);
+    // upgradeProperty
+    Object.keys(defaults).forEach((key) => this._upgradeProperty(key));
 
     // evts
     this.#nodes.grid.addEventListener('click', this._onCollageClick, { signal });
@@ -268,9 +265,9 @@ export class MscCollages extends HTMLElement {
 
   set theme(value) {
     if (value) {
-      return this.setAttribute('theme', value);
+      this.setAttribute('theme', value);
     } else {
-      return this.removeAttribute('theme');
+      this.removeAttribute('theme');
     }
   }
 
@@ -280,9 +277,9 @@ export class MscCollages extends HTMLElement {
 
   set ['object-fit'](value) {
     if (value) {
-      return this.setAttribute('object-fit', value);
+      this.setAttribute('object-fit', value);
     } else {
-      return this.removeAttribute('object-fit');
+      this.removeAttribute('object-fit');
     }
   }
 
@@ -295,9 +292,9 @@ export class MscCollages extends HTMLElement {
       const newValue = [
         ...(typeof value === 'string' ? JSON.parse(value) : value)
       ];
-      return this.setAttribute('collages', JSON.stringify(newValue));
+      this.setAttribute('collages', JSON.stringify(newValue));
     } else {
-      return this.removeAttribute('collages');
+      this.removeAttribute('collages');
     }
   }
 

@@ -6,7 +6,8 @@ People love collages. With collages we could combined several images together an
 ## Basic Usage
 
 - Required Script
-```
+
+```html
 <script 
   type="module"
   src="https://your-domain/wc-msc-collages.js"
@@ -99,7 +100,7 @@ msc-collages {
 ## Attributes
 &lt;msc-collages /&gt; supports some attributes to let it become more convenience & useful.
 
-- theme
+- **theme**
 
 Set theme id for different usage. Developers could set `1` ~ `8` theme. Default is "`1`".
 
@@ -110,7 +111,7 @@ Set theme id for different usage. Developers could set `1` ~ `8` theme. Default 
 ></msc-collages>
 ```
 
-- object-fit
+- **object-fit**
 
 Set image render property. This attribute only accept `cover` or `contain`. Default is "`cover`".
 
@@ -121,7 +122,7 @@ Set image render property. This attribute only accept `cover` or `contain`. Defa
 ></msc-collages>
 ```
 
-- collages
+- **collages**
 
 Set collages data. This should be JSON string and each element needs contains "`link`"、"`src`"、"`alt`"、"`target`" for rendering. Max count is 4.
 
