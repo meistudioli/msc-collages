@@ -1,5 +1,5 @@
 # msc-collages
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/msc-collages)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/msc-collages) [![DeepScan grade](https://deepscan.io/api/teams/16372/projects/19638/branches/512830/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16372&pid=19638&bid=512830)
 
 People love collages. With collages we could combined several images together and make them more vivid and interesting. Developers could apply &lt;msc-collages /> instead of annoying HTML code &amp; CSS setting. All we need to do is just make a few setting and everything will be all set. 
 
