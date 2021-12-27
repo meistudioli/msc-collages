@@ -1,6 +1,6 @@
 {
   "name": "msc-collages",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "People love collages. With collages we could combined several images together and make them more vivid and interesting. Developers could apply <msc-collages /> instead of annoying HTML code & CSS setting. All we need to do is just make a few setting and everything will be all set.",
   "main": "index.js",
   "scripts": {

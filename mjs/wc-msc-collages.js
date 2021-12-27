@@ -134,7 +134,7 @@ export class MscCollages extends HTMLElement {
 
     // data
     this.#data = {
-      controller: new AbortController()
+      controller: ''
     };
 
     // nodes
@@ -154,8 +154,6 @@ export class MscCollages extends HTMLElement {
   }
 
   async connectedCallback() {
-    const signal = this.#data.controller.signal;
-
     const { config, error } = await _wcl.getWCConfig(this);
 
     if (error) {
@@ -173,12 +171,15 @@ export class MscCollages extends HTMLElement {
     Object.keys(defaults).forEach((key) => this._upgradeProperty(key));
 
     // evts
+    this.#data.controller = new AbortController();
+    const signal = this.#data.controller.signal;
     this.#nodes.grid.addEventListener('click', this._onCollageClick, { signal });
   }
 
   disconnectedCallback() {
-    // evts
-    this.#data.controller.abort();
+    if (this.#data?.controller) {
+      this.#data.controller.abort();
+    }
   }
 
   _format(attrName, oldValue, newValue) {
