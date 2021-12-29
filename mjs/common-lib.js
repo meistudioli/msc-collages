@@ -83,7 +83,7 @@ Object.defineProperties(_wcl, {
               c += 5;
               if (c > max) {
                 clearInterval(iid);
-                reject(new Error(`"${unit}" unit missing.`));
+                return reject(new Error(`"${unit}" unit missing.`));
               }
 
               _root = window;
@@ -100,7 +100,7 @@ Object.defineProperties(_wcl, {
 
               if (_root !== null && document.readyState && document.readyState !== 'loading') {
                 clearInterval(iid);
-                resolve();
+                return resolve();
               }
             }, 5);
           });
