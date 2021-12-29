@@ -152,7 +152,7 @@ Set collages data. This should be JSON string and each element needs contains "`
 | object-fit | String | Getter / Setter for image render property. Only accept "`cover`" or "`contain`" |
 | collages | Object | Getter / Setter for collages data. |
 
-## Event
+## Events
 
 | Event Signature | Description |
 | ----------- | ----------- |

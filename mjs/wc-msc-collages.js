@@ -95,7 +95,6 @@ const placeholderCollage = {
   target: '_blank',
 };
 
-
 // Houdini Props and Vals
 if (CSS?.registerProperty) {
   CSS.registerProperty({
@@ -141,7 +140,7 @@ export class MscCollages extends HTMLElement {
     this.#nodes = {
       styleSheet: this.shadowRoot.querySelector('style'),
       grid: this.shadowRoot.querySelector('.collages__grid')
-    }
+    };
 
     // config
     this.#config = {
